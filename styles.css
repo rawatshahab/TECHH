@@ -203,6 +203,7 @@ body {
 /* Hero Background and Overlay */
 .hero {
   position: relative;
+  
   width: 100%;
   min-height: 100vh;
   background: url("https://themexbd.com/poket/restaurant/wp-content/uploads/2021/11/slider-1.jpg")
