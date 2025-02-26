@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Clone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .contact-container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 50px auto;
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input, textarea {
+            padding: 15px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 15px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #ff4500;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff5400;
+        }
+        .contact-info {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 5px 0;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html">
+                <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/11/logo.png" alt="Logo"
+                    height="40">
+            </a>
+            <span class="hamburger">&#9776;</span>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="index.html">Home ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Home Option 1</a></li>
+                        <li><a href="#">Home Option 2</a></li>
+                        <li><a href="#">Home Option 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="menu.html">Menu ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Menu Option 1</a></li>
+                        <li><a href="#">Menu Option 2</a></li>
+                        <li><a href="#">Menu Option 3</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="pages.html">Pages ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Page Option 1</a></li>
+                        <li><a href="#">Page Option 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    
+            <div class="icons">
+                <button class="icon-button">🔍</button>
+                <div class="cart">
+                    <button class="icon-button">🛒</button>
+                    <span>0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="contact-container">
+        <h1>Contact Us</h1>
+        <form class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <p><strong>Email:</strong> info@yourwebsite.com</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Address:</strong> 123 Your Street, Your City, Your Country</p>
+        </div>
+    </section>
+
+
+
+    </body> 
+
+</html>
+    
