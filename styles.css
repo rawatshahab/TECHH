@@ -17,9 +17,11 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
-
+  height: 80px;
+  padding-top: 25px;
   transition: all 0.3s ease;
-  padding: 10px 0; /* Reduced padding for better mobile view */
+ background-color: rgba(0, 0, 0, 0.899999)  ;
+   /* Reduced padding for better mobile view */
 }
 
 .header.scrolled {
@@ -31,7 +33,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #0D0D0D ;
+
   padding: 0 20px; /* Reduced padding for smaller screens */
 }
 
@@ -88,6 +90,7 @@ body {
 .dropdown-menu li {
   padding: 8px 12px; /* Reduced padding for dropdown items */
   text-align: left;
+  
 }
 
 .dropdown-menu li a {
@@ -631,7 +634,7 @@ body {
   padding-bottom: 20px;
 }
 
-.menu-title h2::after {
+/* .menu-title h2::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -640,7 +643,7 @@ body {
   width: 60px;
   height: 3px;
   background-color: #f0ad4e;
-}
+} */
 
 /* Menu Categories */
 .menu-categories {
@@ -802,9 +805,10 @@ body {
 
 /* Footer Base Styles */
 .footer {
-  background-color: #111;
+  background-color: #1F1B24;
   width: 100%;
-  padding: 80px 5%;
+  padding-left: 5%;
+  padding-right: 5%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -826,7 +830,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: center;
+  align-items: flex-start;
+  
+}
+.foot-nav li:hover {
+  color: #FF00FF;
 }
 
 /* Responsive Footer for Tablets and Mobiles */

@@ -4,68 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Clone</title>
+    <title>Restaurant</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="style.css">
-   
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 50px 0;
-}
-
-h1, h2, h3 {
-    color: #333;
-}
-
-p {
-    color: #555;
-    line-height: 1.6;
-}
-
-.about {
-    background: white;
-    padding: 50px 0;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.team {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.team-member {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-    </style>
+    
 </head>
 
 <body>
+
     <header class="header">
         <nav class="navbar">
             <a href="index.html">
@@ -75,30 +22,37 @@ p {
             <span class="hamburger">&#9776;</span>
             <ul class="nav-links">
                 <li class="dropdown">
-                    <a href="index.html">Home ▼</a>
+                    <a href="index.html">Home </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Home Option 1</a></li>
-                        <li><a href="#">Home Option 2</a></li>
-                        <li><a href="#">Home Option 3</a></li>
+                        <li><a href="index.html">option 1</a></li>
+                        <li><a href="index.html">option 2</a></li>
+                        <li><a href="index.html">option 3</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html">About</a></li>
                 <li class="dropdown">
-                    <a href="menu.html">Menu ▼</a>
+                    <a href="menu.html">Menu </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Menu Option 1</a></li>
-                        <li><a href="#">Menu Option 2</a></li>
-                        <li><a href="#">Menu Option 3</a></li>
+                        <li><a href="menu.html">option 1</a></li>
+                        <li><a href="menu.html">option 2</a></li>
+                        <li><a href="menu.html">option 3</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="pages.html">Pages ▼</a>
+                    <a href="pages.html">Pages </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Page Option 1</a></li>
-                        <li><a href="#">Page Option 2</a></li>
+                        <li><a href="pages.html">option 1</a></li>
+                        <li><a href="pages.html">option 2</a></li>
                     </ul>
                 </li>
                 <li><a href="shop.html">Shop</a></li>
+                <li class="dropdown">
+                    <a href="#">Blog</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">option 1</a></li>
+                        <li><a href="#">option 2</a></li>
+                    </ul>
+                </li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
     
@@ -112,9 +66,9 @@ p {
         </nav>
     </header>
     
+    
 
-
-    <section class="img-text">
+    <section class="img-text" style="padding-top: 70px;" >
         <div class="ig1">
             <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/11/about-thumb.jpg"
                 alt="Coffey-tea Moments">
@@ -149,32 +103,288 @@ p {
         </div>
     </section>
 
+    <section id="menu-list" style="background-color: #1F1B24;">
+        <div class="menu-title">
+          <h2 style="color: #00FFFF ;">OUR TOP MENU LIST</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="menu-categories">
+          <p class="category-item" >ALL</p>
+          <p class="category-item">NOON MENU</p>
+          <p class="category-item">AFTERNOON MENU</p>
+          <p class="category-item">NIGHT MENU</p>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/08/list-1.png" alt="Raw Scallops from Erquy">
+            <h3>Raw Scallops from Erquy</h3>
+            <p class="description">1/3 milk foam, 1/3 hot milk, 1/3 espresso</p>
+          </div>
+          <div class="menu-item">
+            <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/08/list-4.png" alt="Paella with seafood">
+            <h3>Paella with seafood</h3>
+            <p class="description">1/3 milk foam, 1/3 hot milk, 1/3 espresso</p>
+          </div>
+          <div class="menu-item">
+            <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/08/list-2.png" alt="Cod Filet Cooked Cake">
+            <h3>Cod Filet Cooked Cake</h3>
+            <p class="description">1/3 milk foam, 1/3 hot milk, 1/3 espresso</p>
+          </div>
+          <div class="menu-item">
+            <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/08/list-5.png" alt="Raw Scallops from Coffee">
+            <h3>Raw Scallops from Coffee</h3>
+            <p class="description">1/3 milk foam, 1/3 hot milk, 1/3 espresso</p>
+          </div>
+          <div class="menu-item">
+            <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/08/list-3.png" alt="Raw Scallops from Erquy">
+            <h3>Raw Scallops from Erquy</h3>
+            <p class="description">1/3 milk foam, 1/3 hot milk, 1/3 espresso</p>
+          </div>
+          <div class="menu-item">
+            <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/08/list-6.png" alt="Cod Filet Cooked Side">
+            <h3>Cod Filet Cooked Side</h3>
+            <p class="description">1/3 milk foam, 1/3 hot milk, 1/3 espresso</p>
+          </div>
+        </div>
+      </section>
 
+      <div id="our-team">
+        <div class="team-header">
+            <p class="subtitle" style="color: #00FFFF;">Our Top Team</p>
+            <h2>MEET OUR PROFESSIONALS</h2>
+            <div class="divider"></div>
+        </div>
 
-
-    <section class="about">
-        <div class="container">
-            <h1>About Us</h1>
-            <p>Welcome to Pocket! We are dedicated to providing top-quality products and services tailored to your needs. Our team of experts works passionately to bring innovative solutions and exceptional customer service.</p>
-            <p>Founded in [Year], we have grown from a small startup to a trusted name in the industry. Our mission is simple — to make your life easier with our solutions.</p>
-            <div class="team">
-                <h2>Meet Our Team</h2>
-                <div class="team-member">
-                    <img src="team-member1.jpg" alt="Team Member 1">
-                    <h3>John Doe</h3>
-                    <p>Founder & CEO</p>
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="person">
+                <div class="image-container">
+                    <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/11/team-01.jpg"
+                        alt="Marcellus H. Waddell">
                 </div>
-                <div class="team-member">
-                    <img src="team-member2.jpg" alt="Team Member 2">
-                    <h3>Jane Smith</h3>
-                    <p>Chief Marketing Officer</p>
+                <div class="person-info">
+                    <h3>MARCELLUS H. WADDELL</h3>
+                    <p class="role">Senior Chefs</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
             </div>
+
+            <!-- Team Member 2 -->
+            <div class="person">
+                <div class="image-container">
+                    <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/11/team-02.jpg"
+                        alt="Robin Smith">
+                </div>
+                <div class="person-info">
+                    <h3>ROBIN SMITH</h3>
+                    <p class="role">Manager</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="person">
+                <div class="image-container">
+                    <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/11/team-03.jpg"
+                        alt="Shief Khan">
+                </div>
+                <div class="person-info">
+                    <h3>SHIEF KHAN</h3>
+                    <p class="role">Visitor</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+
+    <section id="testimonials" style="background-color: #1F1B24;">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <span class="subtitle" style="color: #00FFFF ;">Our Update</span>
+                <h2>WHAT A CLIENT SAY ?</h2>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Testimonial Slider -->
+            <div class="swiper testimonial-slider">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="card-image">
+                            <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/08/blog-09-600x367.jpg"
+                                alt="Dining Experience">
+                        </div>
+                        <div class="card-content">
+                            <h3>Amazing Dining Experience Begins</h3>
+                            <div class="meta">
+                                <span class="author">Poket</span>
+                                <span class="date">24 Jun 2021</span>
+                            </div>
+                            <p>That foresee the pain and trouble hat in their duty through, indignation and are so
+                                beguiled and demoralized by charms</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="card-image">
+                            <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/08/blog-04-600x367.jpg"
+                                alt="One Pot Chicken">
+                        </div>
+                        <div class="card-content">
+                            <h3>The Best Easy One Pot Chicken and Rice</h3>
+                            <div class="meta">
+                                <span class="author">Poket</span>
+                                <span class="date">08 Jun 2021</span>
+                            </div>
+                            <p>That foresee the pain and trouble hat in their duty through, indignation and are so
+                                beguiled and demoralized by charms</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="card-image">
+                            <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/08/blog-02-600x367.jpg"
+                                alt="Creamy Hummus">
+                        </div>
+                        <div class="card-content">
+                            <h3>Super Easy Smooth and Creamy Hummus</h3>
+                            <div class="meta">
+                                <span class="author">Poket</span>
+                                <span class="date">08 Jun 2021</span>
+                            </div>
+                            <p>That foresee the pain and trouble hat in their duty through, indignation and are so
+                                beguiled and demoralized by charms</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="card-image">
+                            <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/08/blog-01-600x367.jpg"
+                                alt="Special Dish">
+                        </div>
+                        <div class="card-content">
+                            <h3>Special Weekend Brunch Recipes</h3>
+                            <div class="meta">
+                                <span class="author">Poket</span>
+                                <span class="date">08 Jun 2021</span>
+                            </div>
+                            <p>That foresee the pain and trouble hat in their duty through, indignation and are so
+                                beguiled and demoralized by charms</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide testimonial-card">
+                        <div class="card-image">
+                            <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/08/blog-09-600x367.jpg"
+                                alt="Seasonal Menu">
+                        </div>
+                        <div class="card-content">
+                            <h3>Seasonal Menu Updates</h3>
+                            <div class="meta">
+                                <span class="author">Poket</span>
+                                <span class="date">08 Jun 2021</span>
+                            </div>
+                            <p>That foresee the pain and trouble hat in their duty through, indignation and are so
+                                beguiled and demoralized by charms</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Newsletter Section -->
+           
         </div>
     </section>
 
 
+    <div class="newsletter">
+        <h3>Looking for Best Restaurant ?</h3>
+        <div class="newsletter-form" >
+            <input type="email" placeholder="Enter Your email address">
+            <button type="submit">Send Message</button>
+        </div>
+    </div>
+<div class="divider"></div>
+<footer class="footer" >
+    <div class="foot-1">
+        <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/11/logo.png" alt="logo" />
+        <p>
+            A monthly digest of the latest news and venen is urna resources. our
+            clinic was created to ma your smile beautiful, healthy and snow-white.
+            venenatis urna resources.
+        </p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#"><i class="fab fa-times"></i></a>
+        </div>
+    </div>
 
+    <div class="foot-2">
+        <h2>Navigation</h2>
+        <ul class="foot-nav" style="list-style: none;" >
+            <li><a style="text-decoration: none; color: inherit;" href="#">Become an Affiliate</a></li>
+            <li><a style="text-decoration: none; color: inherit;" href="#">Community Meetups</a></li>
+            <li><a style="text-decoration: none; color: inherit;" href="#">Why Buy With Us?</a></li>
+            <li><a style="text-decoration: none; color: inherit;" href="#">Blog and News</a></li>
+            <li><a style="text-decoration: none; color: inherit;" href="#">About</a></li>
+        </ul>
+    </div>
+
+    <div class="foot-3">
+        <h2>Address Us</h2>
+        <p><i class="fas fa-map-marker-alt"></i> 378 FA Tower, William SBI 2123, IL, US</p>
+        <p><i class="fas fa-phone"></i> Telephone: (0922) 3354 2252</p>
+        <p><i class="fas fa-envelope"></i> demo@example.com</p>
+        <p><i class="far fa-clock"></i> Time: 9.00am-4.00pm</p>
+    </div>
+
+    <div class="foot-4">
+        <h2>Gallery</h2>
+        <div class="gallery-images">
+            <img height="65px" src="pic1.jpg" alt="Gallery Image">
+            <img height="65px" src="pic2.jpg" alt="Gallery Image">
+            <img height="65px" src="pic3.jpg" alt="Gallery Image">
+            <img height="65px" src="pic1.jpg" alt="Gallery Image">
+            <img height="65px" src="pic2.jpg" alt="Gallery Image">
+            <img height="65px" src="pic3.jpg" alt="Gallery Image">
+        </div>
+    </div>
+
+</footer>
+
+    <div>
+        <p>© 2025 Mayank. All Rights Reserved.</p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
     </body>
 </html>
 

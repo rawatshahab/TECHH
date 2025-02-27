@@ -9,7 +9,19 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="style.css">
     <style>
-       /* Contact Form Section Styles */
+.hero {
+  position: relative;
+  
+  width: 100%;
+  min-height: 100vh;
+  background: url("bdipic.jpg")
+    no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 60px 40px;
+}
+/* Contact Form Section Styles */
 #outer-form-1 {
   display: flex;
   flex-direction: column;
@@ -64,7 +76,7 @@
 
 #outer-form-1 button {
   padding: 15px 30px;
-  background-color: #f0ad4e;
+  background-color: white;
   color: #111;
   border: none;
   border-radius: 5px;
@@ -78,7 +90,7 @@
 }
 
 #outer-form-1 button:hover {
-  background-color: #bb8858;
+  background-color:  #FF00FF;
   color: #fff;
 }
 
@@ -119,30 +131,37 @@
             <span class="hamburger">&#9776;</span>
             <ul class="nav-links">
                 <li class="dropdown">
-                    <a href="index.html">Home ▼</a>
+                    <a href="index.html">Home </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Home Option 1</a></li>
-                        <li><a href="#">Home Option 2</a></li>
-                        <li><a href="#">Home Option 3</a></li>
+                        <li><a href="index.html">option 1</a></li>
+                        <li><a href="index.html">option 2</a></li>
+                        <li><a href="index.html">option 3</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html">About</a></li>
                 <li class="dropdown">
-                    <a href="menu.html">Menu ▼</a>
+                    <a href="menu.html">Menu </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Menu Option 1</a></li>
-                        <li><a href="#">Menu Option 2</a></li>
-                        <li><a href="#">Menu Option 3</a></li>
+                        <li><a href="menu.html">option 1</a></li>
+                        <li><a href="menu.html">option 2</a></li>
+                        <li><a href="menu.html">option 3</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="pages.html">Pages ▼</a>
+                    <a href="pages.html">Pages </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Page Option 1</a></li>
-                        <li><a href="#">Page Option 2</a></li>
+                        <li><a href="pages.html">option 1</a></li>
+                        <li><a href="pages.html">option 2</a></li>
                     </ul>
                 </li>
                 <li><a href="shop.html">Shop</a></li>
+                <li class="dropdown">
+                    <a href="#">Blog</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">option 1</a></li>
+                        <li><a href="#">option 2</a></li>
+                    </ul>
+                </li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
     
@@ -162,48 +181,39 @@
         <div class="hero">
             <div class="left-home">
                 <section class="img-section">
-                    <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/11/text.png"
-                        alt="Hero Image">
+                    
                 </section>
 
                 <section class="heading-section">
-                    <p class="home-heading">Explore</p>
+                    <p style="color: #00FFFF;" class="home-heading">Welcome </p>
                 </section>
 
-                <button class="btn-mg1"> DISCOVER MORE</button>
+                <button class="btn-mg1"> EXPLORE MORE</button>
             </div>
         </div>
 
     </section>
-    
-    <h1>Welcome to Our Restaurant</h1>
-    
-    <button>Explore Menu</button>
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are passionate about serving delicious food with a warm atmosphere.</p>
-        <img src="https://example.com/about-image.jpg" alt="About Image">
-    </section>
+ 
 
     <!-- Menu Section -->
-    <section id="menu-list">
+     <div class="divider"></div>
+    <section id="menu-list" style="background-color: #1F1B24 ;">
         <h2>Our Menu</h2>
         <div class="menu-grid">
-            <div class="menu-item">
-                <img src="https://example.com/menu-item1.jpg" alt="Menu Item 1">
+            <div class="menu-item" style="background-color: #111;">
+                <img src="pic1.jpg"Menu Item 1">
                 <h3>Menu Item 1</h3>
                 <p>Delicious dish made with love.</p>
                 <span>$10.99</span>
             </div>
-            <div class="menu-item">
-                <img src="https://example.com/menu-item2.jpg" alt="Menu Item 2">
+            <div class="menu-item" style="background-color: #111;">
+                <img src="pic2.jpg" alt="Menu Item 2">
                 <h3>Menu Item 2</h3>
                 <p>Another tasty option.</p>
                 <span>$12.99</span>
             </div>
-            <div class="menu-item">
-                <img src="https://example.com/menu-item3.jpg" alt="Menu Item 3">
+            <div class="menu-item" style="background-color: #111;">
+                <img src="pic3.jpg" alt="Menu Item 3">
                 <h3>Menu Item 3</h3>
                 <p>Our signature dish.</p>
                 <span>$14.99</span>
@@ -236,6 +246,54 @@
             <button>Send Message</button>
         </form>
     </section>
+    <div class="divider"></div>
+    <footer class="footer" >
+        <div class="foot-1">
+            <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/11/logo.png" alt="logo" />
+            <p>
+                A monthly digest of the latest news and venen is urna resources. our
+                clinic was created to ma your smile beautiful, healthy and snow-white.
+                venenatis urna resources.
+            </p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-times"></i></a>
+            </div>
+        </div>
+
+        <div class="foot-2">
+            <h2>Navigation</h2>
+            <ul class="foot-nav" style="list-style: none;" >
+                <li><a style="text-decoration: none; color: inherit;" href="#">Become an Affiliate</a></li>
+                <li><a style="text-decoration: none; color: inherit;" href="#">Community Meetups</a></li>
+                <li><a style="text-decoration: none; color: inherit;" href="#">Why Buy With Us?</a></li>
+                <li><a style="text-decoration: none; color: inherit;" href="#">Blog and News</a></li>
+                <li><a style="text-decoration: none; color: inherit;" href="#">About</a></li>
+            </ul>
+        </div>
+
+        <div class="foot-3">
+            <h2>Address Us</h2>
+            <p><i class="fas fa-map-marker-alt"></i> 378 FA Tower, William SBI 2123, IL, US</p>
+            <p><i class="fas fa-phone"></i> Telephone: (0922) 3354 2252</p>
+            <p><i class="fas fa-envelope"></i> demo@example.com</p>
+            <p><i class="far fa-clock"></i> Time: 9.00am-4.00pm</p>
+        </div>
+
+        <div class="foot-4">
+            <h2>Gallery</h2>
+            <div class="gallery-images">
+                <img height="65px" src="pic1.jpg" alt="Gallery Image">
+                <img height="65px" src="pic2.jpg" alt="Gallery Image">
+                <img height="65px" src="pic3.jpg" alt="Gallery Image">
+                <img height="65px" src="pic1.jpg" alt="Gallery Image">
+                <img height="65px" src="pic2.jpg" alt="Gallery Image">
+                <img height="65px" src="pic3.jpg" alt="Gallery Image">
+            </div>
+        </div>
+
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
