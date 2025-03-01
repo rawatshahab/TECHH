@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+      <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1F1B24;
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            color: white;
+        }
+        h2 {
+            font-weight: bold;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-image img {
+            width: 80px;
+            border-radius: 8px;
+        }
+        .coupon-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .apply-btn, .update-btn {
+            background: white;
+            color: black;
+        }
+        .cart-totals {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .cart-totals h3 {
+            background:  white;
+            color: black;
+            padding: 10px;
+            text-align: center;
+            max-width: 150px;
+            margin: 0 auto;
+        }
+   
+        
+        .checkout-btn {
+            display: block;
+            background: white;
+            font-size: 14px;
+            color: black;
+            padding: 15px 30px;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            max-width: 300px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin: 0 auto;
+            text-decoration: none;
+        }
+        .checkout-btn:hover {
+         background-color:  #FF00FF;
+         color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
+            }
+        @media (max-width: 768px) {
+            th, td {
+                padding: 10px;
+                font-size: 14px;
+            }
+            .cart-image img {
+                width: 60px;
+            }
+        }
+        @media (max-width: 480px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            th { display: none; }
+            tr {
+                margin-bottom: 15px;
+                border-bottom: 1px solid #ddd;
+            }
+            td {
+                display: flex;
+                justify-content: space-between;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html">
+                <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/11/logo.png" alt="Logo"
+                    height="40">
+            </a>
+            <span class="hamburger">&#9776;</span>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="index.html">Home </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">option 1</a></li>
+                        <li><a href="index.html">option 2</a></li>
+                        <li><a href="index.html">option 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="menu.html">Menu </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="menu.html">option 1</a></li>
+                        <li><a href="menu.html">option 2</a></li>
+                        <li><a href="menu.html">option 3</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="pages.html">Pages </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages.html">option 1</a></li>
+                        <li><a href="pages.html">option 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="shop.html">Shop</a></li>
+                <li class="dropdown">
+                    <a href="#">Blog</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">option 1</a></li>
+                        <li><a href="#">option 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    
+            <div class="icons">
+                <button class="icon-button">🔍</button>
+                <div class="cart">
+                    <button class="icon-button" onclick="window.location.href='checkout.html'">🛒</button>
+                    <span>0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h2 style="color: #00FFFF;">Cart</h2>
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>DELETE</th>
+                    <th>IMAGE</th>
+                    <th>PRODUCT</th>
+                    <th>PRICE</th>
+                    <th>QUANTITY</th>
+                    <th>SUBTOTAL</th>
+                </tr>
+            </thead>
+            <tbody id="cartBody"></tbody>
+        </table>
+
+        <div class="coupon-section">
+            <label for="couponInput">Coupon:</label>
+            <input id="couponInput" type="text" placeholder="Coupon code">
+            <button class="apply-btn" onclick="applyCoupon()">Apply coupon</button>
+            <button class="update-btn" onclick="updateCart()">Update cart</button>
+        </div>
+
+        <div class="cart-totals" id="cartTotals">
+            <h3>Cart totals</h3>
+            <p>SUBTOTAL: ₹0</p>
+            <p>TOTAL: ₹0</p>
+            <button class="checkout-btn">Proceed to checkout</button>
+        </div>
+    </div>
+    <footer class="footer" >
+        <div class="foot-1">
+            <img src="https://themexbd.com/poket/restaurant/wp-content/uploads/2021/11/logo.png" alt="logo" />
+            <p>
+                A monthly digest of the latest news and venen is urna resources. our
+                clinic was created to ma your smile beautiful, healthy and snow-white.
+                venenatis urna resources.
+            </p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-times"></i></a>
+            </div>
+        </div>
+
+        <div class="foot-2">
+            <h2>Navigation</h2>
+            <ul class="foot-nav" style="list-style: none;" >
+                <li><a style="text-decoration: none; color: inherit;" href="#">Become an Affiliate</a></li>
+                <li><a style="text-decoration: none; color: inherit;" href="#">Community Meetups</a></li>
+                <li><a style="text-decoration: none; color: inherit;" href="#">Why Buy With Us?</a></li>
+                <li><a style="text-decoration: none; color: inherit;" href="#">Blog and News</a></li>
+                <li><a style="text-decoration: none; color: inherit;" href="#">About</a></li>
+            </ul>
+        </div>
+
+        <div class="foot-3">
+            <h2>Address Us</h2>
+            <p><i class="fas fa-map-marker-alt"></i> 378 FA Tower, William SBI 2123, IL, US</p>
+            <p><i class="fas fa-phone"></i> Telephone: (0922) 3354 2252</p>
+            <p><i class="fas fa-envelope"></i> demo@example.com</p>
+            <p><i class="far fa-clock"></i> Time: 9.00am-4.00pm</p>
+        </div>
+
+        <div class="foot-4">
+            <h2>Gallery</h2>
+            <div class="gallery-images">
+                <img height="65px" src="pic1.jpg" alt="Gallery Image">
+                <img height="65px" src="pic2.jpg" alt="Gallery Image">
+                <img height="65px" src="pic3.jpg" alt="Gallery Image">
+                <img height="65px" src="pic1.jpg" alt="Gallery Image">
+                <img height="65px" src="pic2.jpg" alt="Gallery Image">
+                <img height="65px" src="pic3.jpg" alt="Gallery Image">
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function renderCart() {
+            const cartBody = document.getElementById('cartBody');
+            const cartTotals = document.getElementById('cartTotals');
+            cartBody.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartBody.innerHTML = '<tr><td colspan="6">Your cart is empty!</td></tr>';
+            }
+
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+
+                cartBody.innerHTML += `
+                    <tr>
+                        <td><button onclick="removeItem(${index})">🗑️</button></td>
+                        <td class="cart-image"><img src="${item.image}" alt="${item.name}"></td>
+                        <td>${item.name}</td>
+                        <td>₹${item.price.toFixed(2)}</td>
+                        <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)"></td>
+                        <td>₹${subtotal.toFixed(2)}</td>
+                    </tr>
+                `;
+            });
+
+            cartTotals.innerHTML = `
+                <h3>Cart totals</h3>
+                <p>SUBTOTAL: ₹${total.toFixed(2)}</p>
+                <p>TOTAL: ₹${total.toFixed(2)}</p>
+                <a href="#" class="checkout-btn">Proceed to checkout</a>
+            `;
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            renderCart();
+        }
+
+        function updateQuantity(index, quantity) {
+            const newQty = parseInt(quantity);
+            if (newQty > 0) {
+                cart[index].quantity = newQty;
+                renderCart();
+            }
+        }
+
+        function applyCoupon() {
+            const couponInput = document.getElementById('couponInput').value.trim();
+            if (couponInput === 'DISCOUNT10') {
+                alert('10% discount applied!');
+                cart = cart.map(item => ({
+                    ...item,
+                    price: item.price * 0.9
+                }));
+                renderCart();
+            } else {
+                alert('Invalid coupon code');
+            }
+        }
+
+        function updateCart() {
+            renderCart();
+        }
+
+        window.onload = renderCart;
+    </script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="script.js">
+        </script>
+    
+</body>
+</html>

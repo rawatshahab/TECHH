@@ -95,7 +95,7 @@
             <div class="icons">
                 <button class="icon-button">🔍</button>
                 <div class="cart">
-                    <button class="icon-button">🛒</button>
+                    <button class="icon-button" onclick="window.location.href='checkout.html'">🛒</button>
                     <span>0</span>
                 </div>
             </div>
@@ -106,170 +106,111 @@
     
     <div class="menu-container" style="margin-top: 40px;">
         <!-- Appetizers Section -->
-        <div class="menu-section">
-            <h2>Appetizers</h2>
-            <div class="menu-item">
-                <span class="item-name">Bruschetta</span>
-                <span class="item-price">₹8.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Garlic Bread</span>
-                <span class="item-price">₹6.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Stuffed Mushrooms</span>
-                <span class="item-price">₹9.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Caesar Salad</span>
-                <span class="item-price">₹7.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Spring Rolls</span>
-                <span class="item-price">₹5.99</span>
-            </div>
-        </div>
+       <!-- Appetizers Section -->
+<div class="menu-section">
+    <h2>Appetizers</h2>
+    <div class="menu-item" data-name="Bruschetta" data-price="8.99">
+        <span class="item-name">Bruschetta</span>
+        <span class="item-price">₹8.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Garlic Bread" data-price="6.99">
+        <span class="item-name">Garlic Bread</span>
+        <span class="item-price">₹6.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Stuffed Mushrooms" data-price="9.99">
+        <span class="item-name">Stuffed Mushrooms</span>
+        <span class="item-price">₹9.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Caesar Salad" data-price="7.99">
+        <span class="item-name">Caesar Salad</span>
+        <span class="item-price">₹7.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Spring Rolls" data-price="5.99">
+        <span class="item-name">Spring Rolls</span>
+        <span class="item-price">₹5.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+</div>
 
-        <!-- Main Courses Section -->
-        <div class="menu-section">
-            <h2>Main Courses</h2>
-            <div class="menu-item">
-                <span class="item-name">Grilled Salmon</span>
-                <span class="item-price">₹18.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Chicken Alfredo</span>
-                <span class="item-price">₹14.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Beef Steak</span>
-                <span class="item-price">₹22.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Vegetable Stir Fry</span>
-                <span class="item-price">₹12.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Spaghetti Bolognese</span>
-                <span class="item-price">₹13.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">BBQ Ribs</span>
-                <span class="item-price">₹19.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Margherita Pizza</span>
-                <span class="item-price">₹10.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Lobster Tail</span>
-                <span class="item-price">₹29.99</span>
-            </div>
-        </div>
+<!-- Main Courses Section -->
+<div class="menu-section">
+    <h2>Main Courses</h2>
+    <div class="menu-item" data-name="Grilled Salmon" data-price="18.99">
+        <span class="item-name">Grilled Salmon</span>
+        <span class="item-price">₹18.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Chicken Alfredo" data-price="14.99">
+        <span class="item-name">Chicken Alfredo</span>
+        <span class="item-price">₹14.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Beef Steak" data-price="22.99">
+        <span class="item-name">Beef Steak</span>
+        <span class="item-price">₹22.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Vegetable Stir Fry" data-price="12.99">
+        <span class="item-name">Vegetable Stir Fry</span>
+        <span class="item-price">₹12.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Spaghetti Bolognese" data-price="13.99">
+        <span class="item-name">Spaghetti Bolognese</span>
+        <span class="item-price">₹13.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="BBQ Ribs" data-price="19.99">
+        <span class="item-name">BBQ Ribs</span>
+        <span class="item-price">₹19.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Margherita Pizza" data-price="10.99">
+        <span class="item-name">Margherita Pizza</span>
+        <span class="item-price">₹10.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Lobster Tail" data-price="29.99">
+        <span class="item-name">Lobster Tail</span>
+        <span class="item-price">₹29.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+</div>
 
-        <!-- Desserts Section -->
-        <div class="menu-section">
-            <h2>Desserts</h2>
-            <div class="menu-item">
-                <span class="item-name">Chocolate Lava Cake</span>
-                <span class="item-price">₹7.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Cheesecake</span>
-                <span class="item-price">₹6.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Tiramisu</span>
-                <span class="item-price">₹8.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Apple Pie</span>
-                <span class="item-price">₹5.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Ice Cream Sundae</span>
-                <span class="item-price">₹4.99</span>
-            </div>
-        </div>
+<!-- Desserts Section -->
+<div class="menu-section">
+    <h2>Desserts</h2>
+    <div class="menu-item" data-name="Chocolate Lava Cake" data-price="7.99">
+        <span class="item-name">Chocolate Lava Cake</span>
+        <span class="item-price">₹7.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Cheesecake" data-price="6.99">
+        <span class="item-name">Cheesecake</span>
+        <span class="item-price">₹6.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Tiramisu" data-price="8.99">
+        <span class="item-name">Tiramisu</span>
+        <span class="item-price">₹8.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Apple Pie" data-price="5.99">
+        <span class="item-name">Apple Pie</span>
+        <span class="item-price">₹5.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+    <div class="menu-item" data-name="Ice Cream Sundae" data-price="4.99">
+        <span class="item-name">Ice Cream Sundae</span>
+        <span class="item-price">₹4.99</span>
+        <button class="icon-button add-to-cart">🛒</button>
+    </div>
+</div>
 
-        <!-- Beverages Section -->
-        <div class="menu-section">
-            <h2>Beverages</h2>
-            <div class="menu-item">
-                <span class="item-name">Fresh Orange Juice</span>
-                <span class="item-price">₹3.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Iced Tea</span>
-                <span class="item-price">₹2.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Mojito</span>
-                <span class="item-price">₹5.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Cappuccino</span>
-                <span class="item-price">₹4.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Red Wine</span>
-                <span class="item-price">₹7.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Sparkling Water</span>
-                <span class="item-price">₹1.99</span>
-            </div>
-        </div>
-
-        <!-- Sides Section -->
-        <div class="menu-section">
-            <h2>Sides</h2>
-            <div class="menu-item">
-                <span class="item-name">French Fries</span>
-                <span class="item-price">₹3.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Onion Rings</span>
-                <span class="item-price">₹4.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Mashed Potatoes</span>
-                <span class="item-price">₹3.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Grilled Vegetables</span>
-                <span class="item-price">₹5.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Garlic Parmesan Fries</span>
-                <span class="item-price">₹4.99</span>
-            </div>
-        </div>
-
-        <!-- Specials Section -->
-        <div class="menu-section">
-            <h2>Specials</h2>
-            <div class="menu-item">
-                <span class="item-name">Chef's Special Pasta</span>
-                <span class="item-price">₹16.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Surf & Turf</span>
-                <span class="item-price">₹34.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Truffle Risotto</span>
-                <span class="item-price">₹19.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Seafood Platter</span>
-                <span class="item-price">₹28.99</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Vegetarian Delight</span>
-                <span class="item-price">₹14.99</span>
-            </div>
-        </div>
     </div>
     <div class="divider"></div>
     <footer class="footer" >
@@ -323,9 +264,10 @@
     <div>
         <p>© 2025 chetan. All Rights Reserved.</p>
     </div>
-
+   
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
 </body>
 
 </html>
