@@ -173,14 +173,16 @@
             </ul>
     
             <div class="icons">
-                <button class="icon-button">🔍</button>
+                <button class="icon-button" onclick="toggleSearchBar()">🔍</button>
                 <div class="cart">
                     <button class="icon-button" onclick="window.location.href='checkout.html'">🛒</button>
                     <span>0</span>
                 </div>
             </div>
         </nav>
-    </header>
+        <div id="searchBar" class="search-bar" style="display: none;">
+            <input type="text" id="searchInput" placeholder="Search..." onkeypress="handleSearch(event)">
+        </div> </header>
     <div class="container">
         <h2 style="color: #00FFFF;">Cart</h2>
         <table id="cartTable">

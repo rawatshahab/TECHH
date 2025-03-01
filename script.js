@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Save updated cart to localStorage
         localStorage.setItem('cart', JSON.stringify(cart));
-        alert(`${name} added to carttt!`);
+        
         updateCartCount();
     }
 
@@ -86,3 +86,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial update of cart count
     updateCartCount();
 });
+
+
+    function toggleSearchBar() {
+        const searchBar = document.getElementById('searchBar');
+        searchBar.style.display = searchBar.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function handleSearch(event) {
+        if (event.key === 'Enter') {
+            window.location.href = 'shop.html';
+        }
+    }

@@ -55,14 +55,16 @@
             </ul>
     
             <div class="icons">
-                <button class="icon-button">🔍</button>
+                <button class="icon-button" onclick="toggleSearchBar()">🔍</button>
                 <div class="cart">
                     <button class="icon-button" onclick="window.location.href='checkout.html'">🛒</button>
                     <span>0</span>
                 </div>
             </div>
         </nav>
-    </header>
+        <div id="searchBar" class="search-bar" style="display: none;">
+            <input type="text" id="searchInput" placeholder="Search..." onkeypress="handleSearch(event)">
+        </div> </header>
     
     <section id="home">
         <div class="hero">
@@ -492,7 +494,18 @@
     <div>
         <p>© 2025 Mayank. All Rights Reserved.</p>
     </div>
-
+    <script>
+        function toggleSearchBar() {
+            const searchBar = document.getElementById('searchBar');
+            searchBar.style.display = searchBar.style.display === 'none' ? 'block' : 'none';
+        }
+    
+        function handleSearch(event) {
+            if (event.key === 'Enter') {
+                window.location.href = 'shop.html';
+            }
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>

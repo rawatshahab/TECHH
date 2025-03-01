@@ -872,3 +872,19 @@ body {
     gap: 10px;
   }
 }
+.search-bar {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 200px;
+}
