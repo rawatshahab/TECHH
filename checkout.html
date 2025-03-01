@@ -14,30 +14,41 @@
             padding: 20px;
             margin: 0;
             box-sizing: border-box;
+            color: white;
         }
+
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            color: white;
         }
+
         h2 {
             font-weight: bold;
             text-align: center;
+            color: #00FFFF;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
+
         th, td {
             padding: 15px;
             text-align: center;
             border-bottom: 1px solid #ddd;
         }
+
+        th {
+            background: #333;
+        }
+
         .cart-image img {
             width: 80px;
             border-radius: 8px;
         }
+
         .coupon-section {
             display: flex;
             flex-wrap: wrap;
@@ -45,6 +56,7 @@
             align-items: center;
             justify-content: space-between;
         }
+
         input[type="text"], input[type="number"] {
             padding: 8px;
             border: 1px solid #ccc;
@@ -52,31 +64,25 @@
             width: 100%;
             max-width: 300px;
         }
+
         button {
             padding: 10px 20px;
             border: none;
             border-radius: 6px;
             cursor: pointer;
         }
+
         .apply-btn, .update-btn {
             background: white;
             color: black;
         }
+
         .cart-totals {
             border: 1px solid #ddd;
             padding: 20px;
             margin-top: 20px;
         }
-        .cart-totals h3 {
-            background:  white;
-            color: black;
-            padding: 10px;
-            text-align: center;
-            max-width: 150px;
-            margin: 0 auto;
-        }
-   
-        
+
         .checkout-btn {
             display: block;
             background: white;
@@ -84,46 +90,59 @@
             color: black;
             padding: 15px 30px;
             margin-top: 20px;
-            border: none;
-            cursor: pointer;
+            text-align: center;
             max-width: 300px;
             text-transform: uppercase;
             font-weight: 600;
             letter-spacing: 1px;
             border-radius: 3px;
             transition: all 0.3s ease;
-            text-decoration: none;
             margin: 0 auto;
             text-decoration: none;
         }
+
         .checkout-btn:hover {
-         background-color:  #FF00FF;
-         color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
-            }
+            background-color: #FF00FF;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
+        }
+
         @media (max-width: 768px) {
             th, td {
                 padding: 10px;
                 font-size: 14px;
             }
+
             .cart-image img {
                 width: 60px;
             }
         }
+
         @media (max-width: 480px) {
             table, thead, tbody, th, td, tr {
                 display: block;
             }
-            th { display: none; }
+
             tr {
                 margin-bottom: 15px;
                 border-bottom: 1px solid #ddd;
             }
+
             td {
                 display: flex;
                 justify-content: space-between;
                 padding: 8px;
+            }
+
+            td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            th {
+                display: none;
             }
         }
     </style>
@@ -281,14 +300,13 @@
 
                 cartBody.innerHTML += `
                     <tr>
-                        <td><button onclick="removeItem(${index})">🗑️</button></td>
-                        <td class="cart-image"><img src="${item.image}" alt="${item.name}"></td>
-                        <td>${item.name}</td>
-                        <td>₹${item.price.toFixed(2)}</td>
-                        <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)"></td>
-                        <td>₹${subtotal.toFixed(2)}</td>
-                    </tr>
-                `;
+                        <td data-label="DELETE"><button onclick="removeItem(${index})">🗑️</button></td>
+                        <td data-label="IMAGE" class="cart-image"><img src="${item.image}" alt="${item.name}"></td>
+                        <td data-label="PRODUCT">${item.name}</td>
+                        <td data-label="PRICE">₹${item.price.toFixed(2)}</td>
+                        <td data-label="QUANTITY"><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)"></td>
+                        <td data-label="SUBTOTAL">₹${subtotal.toFixed(2)}</td>
+                    </tr>`;
             });
 
             cartTotals.innerHTML = `
